@@ -108,8 +108,8 @@ func track(token string, command string, user int) {
 }
 
 func main() {
-	botan = "6Xk_KL1T-JMJV:Co7-agHJxM3lMF_FWU"
-	token = "251655372:AAFgnjEkAvBoczP_6P1GR6Z5WLYA6kwB48U"
+	botan = os.Getenv("BOTAN")
+	token = os.Getenv("TOKEN")
 	host = os.Getenv("HOST")
 	hredis = os.Getenv("REDIS_HOST")
 	bot := kbot.Bot{Token: token, Host: host, Handler: handler}
